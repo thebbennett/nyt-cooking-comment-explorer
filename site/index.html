@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read the Comments</title>
+<meta name="description" content="The funniest, weirdest, and most human comments left on NYT Cooking recipes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1>Read the Comments</h1>
+    <p class="tagline">One of the last corners of real human interaction on the internet is, improbably, the comment section of a chocolate chip cookie recipe.</p>
+  </div>
+</header>
+
+<div class="controls wrap">
+  <input id="search" type="search" placeholder="Search comments, recipes, or names…" aria-label="Search">
+  <div class="tags" id="tagFilters" role="group" aria-label="Filter by tag"></div>
+  <button id="shuffle" class="shuffle-btn" type="button">🎲 Shuffle</button>
+</div>
+
+<main class="wrap">
+  <div id="count" class="count"></div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>No comments match that search.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Every comment here is quoted from a public NYT Cooking recipe page, with the commenter's screen name as posted, linked back to the original recipe. Nothing is edited for meaning — only lightly trimmed for length where noted.</p>
+    <p>If you're the author of a comment shown here and would like it removed, <a href="mailto:thebrittanybennett@gmail.com">get in touch</a> and it'll come down.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

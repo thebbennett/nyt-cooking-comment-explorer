@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Raw scraped candidates are unreviewed -- never commit them, especially
+# if this repo ends up public. Only site/data/published.json (reviewed
+# by a human via review/review.py) should ever be committed/deployed.
+data/candidates.json
