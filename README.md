@@ -8,6 +8,10 @@ on the NYT Cooking website — one of the last corners of the internet where hum
 1. **Scrape candidates** (`scraper/fetch_comments.py`): fetches a recipe page
    and pulls out the ~15 comments, ranked by reader recommendations. Writes them to `data/candidates.json`, a private review queue. 
 
+1b. **Or add one by hand** (`scraper/add_comment.py`): for a great comment
+   you spot yourself while browsing NYT Cooking — one that isn't in the
+   scraper's top 15. Same review queue, same rules.
+
 2. **Review** (`review/review.py`): an interactive CLI that shows you each
    candidate one at a time. Approve, edit-and-approve, skip, or reject. You
    also tag approved comments (funny / heartfelt / chaotic / wisdom /
@@ -26,6 +30,14 @@ cd scraper
 python3 fetch_comments.py https://cooking.nytimes.com/recipes/1015819-chocolate-chip-cookies
 # or, from a list:
 python3 fetch_comments.py --file recipe_urls.txt
+```
+
+Or add a comment you found yourself:
+
+```bash
+cd scraper
+python3 add_comment.py
+# prompts for the recipe URL, commenter's name, and the comment text
 ```
 
 Then review what came in:
