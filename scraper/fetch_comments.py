@@ -19,11 +19,13 @@ requests -- there's no reason to hammer NYT's servers for a personal
 curation project.
 """
 import argparse
+import gzip
 import json
 import re
 import sys
 import time
 import urllib.request
+import zlib
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -53,9 +55,19 @@ def save_json_list(path: Path, items: list) -> None:
 
 
 def fetch_html(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(
+        url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, deflate"}
+    )
     with urllib.request.urlopen(req, timeout=20) as resp:
-        return resp.read().decode("utf-8", errors="replace")
+        raw = resp.read()
+        encoding = resp.headers.get("Content-Encoding", "")
+
+    if encoding == "gzip":
+        raw = gzip.decompress(raw)
+    elif encoding == "deflate":
+        raw = zlib.decompress(raw)
+
+    return raw.decode("utf-8", errors="replace")
 
 
 def extract_recipe_title(html: str) -> str:

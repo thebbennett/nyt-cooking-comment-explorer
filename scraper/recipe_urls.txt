@@ -1,3 +1,26 @@
 # One NYT Cooking recipe URL per line. Lines starting with # are ignored.
 # Add recipes you know have great comment sections, then run:
 #   python3 fetch_comments.py --file recipe_urls.txt
+
+# Top 20 from NYT Cooking's own "Our 50 Most Popular Recipes of All Time
+# (So Far)" collection: https://cooking.nytimes.com/68861692-nyt-cooking/13395693-our-50-most-popular-recipes-of-all-time-so-far
+https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi
+https://cooking.nytimes.com/recipes/1024066-gochujang-buttered-noodles
+https://cooking.nytimes.com/recipes/4735-old-fashioned-beef-stew
+https://cooking.nytimes.com/recipes/1021931-extra-creamy-scrambled-eggs
+https://cooking.nytimes.com/recipes/1020290-one-pot-pasta-with-ricotta-and-lemon
+https://cooking.nytimes.com/recipes/1020926-roasted-tomato-and-white-bean-stew
+https://cooking.nytimes.com/recipes/1024503-marry-me-chicken
+https://cooking.nytimes.com/recipes/1023047-sticky-coconut-chicken-and-rice
+https://cooking.nytimes.com/recipes/7985-turkey-chili
+https://cooking.nytimes.com/recipes/1023012-san-francisco-style-vietnamese-american-garlic-noodles
+https://cooking.nytimes.com/recipes/1019763-korean-bbq-style-meatballs
+https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara
+https://cooking.nytimes.com/recipes/3783-original-plum-torte
+https://cooking.nytimes.com/recipes/1017577-best-gazpacho
+https://cooking.nytimes.com/recipes/1020970-turmeric-black-pepper-chicken-with-asparagus
+https://cooking.nytimes.com/recipes/1020631-thai-inspired-chicken-meatball-soup
+https://cooking.nytimes.com/recipes/2868-jordan-marshs-blueberry-muffins
+https://cooking.nytimes.com/recipes/1016062-red-lentil-soup
+https://cooking.nytimes.com/recipes/1015825-creamy-macaroni-and-cheese
+https://cooking.nytimes.com/recipes/1020828-lemony-shrimp-and-bean-stew
